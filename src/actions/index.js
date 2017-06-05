@@ -1,6 +1,8 @@
 import axios from 'axios';
 
 export const FETCH_POSTS = 'fetch_posts';
+export const CREATE_POSTS = 'create_posts';
+
 
 const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
 const API_KEY = '?key=DAVIDSIMON';
@@ -14,3 +16,12 @@ export function fetchPosts() {
     };
 }
 
+export function createPost(values) {
+    const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values);
+    // we want to send remote api with values
+
+    return {
+        type: CREATE_POSTS,
+        payload: request
+    };
+}
