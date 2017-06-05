@@ -11,6 +11,7 @@ class PostsShow extends Component {
 
     onDeleteClick() {
         const { id } = this.props.match.params;
+
         this.props.deletePost(id, () => {
             this.props.history.push('/');
         });
@@ -31,7 +32,7 @@ class PostsShow extends Component {
                 className="btn btn-danger pull-xs-right"
                 onClick={this.onDeleteClick.bind(this)}
                 >
-                Delete Post
+                    Delete Post
                 </button>
                 <h3>{post.title}</h3>
                 <h6>Categories: {post.categories}</h6>
