@@ -26,7 +26,7 @@ class BookList extends Component {
     }
 }
 
-function mapStateToProps() {
+function mapStateToProps(state) {
     return {
         books: state.books
     };
