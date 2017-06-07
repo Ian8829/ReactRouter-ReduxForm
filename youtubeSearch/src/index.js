@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
-import SearchBar from './components/search_bar';
 const API_KEY = 'AIzaSyD5csg_18zq0N-PUuQk_YwrIhIzpzifNAk';
 
 class App extends Component {
@@ -15,7 +15,11 @@ class App extends Component {
             selectedVideo: null
         };
 
-        YTSearch({key: API_KEY, term: 'Oliver Heldens'}, videos => {
+        this.videoSearch('Oliver Heldens')
+    }
+
+    videoSearch(term) {
+        YTSearch({key: API_KEY, term}, videos => {
             this.setState({
                 videos,
                 selectedVideo: videos[0]
@@ -26,7 +30,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <SearchBar/>
+                <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({selectedVideo})}
