@@ -21,7 +21,7 @@ class SearchBar extends Component {
         event.preventDefault();
 
         // need to go and fetch weather data
-        this.props.fetchWeather();
+        this.props.fetchWeather(this.state.term);
         this.setState({ term: '' });
     }
 
@@ -31,10 +31,10 @@ class SearchBar extends Component {
                 className="input-group"
                 onSubmit={this.onFormSubmit}>
                 <input
-                placeholder="Get a five-day forecast in your favorite cities"
-                className="form-control"
-                value={this.state.term}
-                onChange={this.onInputChange}
+                    placeholder="Get a five-day forecast in your favorite cities"
+                    className="form-control"
+                    value={this.state.term}
+                    onChange={this.onInputChange}
                 />
                 <span className="input-group-btn">
                     <button className="btn btn-secondary" type="submit">
