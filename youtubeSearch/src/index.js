@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import YTSearch from 'youtube-api-search';
 
 import SearchBar from './components/search_bar';
 
 const API_KEY = 'AIzaSyD5csg_18zq0N-PUuQk_YwrIhIzpzifNAk';
+
+YTSearch({key: API_KEY, term: 'Sasha'}, data => {
+    console.log(data);
+});
 
 // Create a new comp.
 const App = function () {
@@ -13,7 +18,6 @@ const App = function () {
         </div>
     );
 };
-
 
 // Take upper comp is generated HTML and put it on page
 ReactDOM.render(
