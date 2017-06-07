@@ -1,0 +1,11 @@
+bundle.js
+npm-debug.log
+.DS_Store
+node_modules
+.idea
+test
+package-lock.json
+webpack.config.js
+.babelrc
+
+
