@@ -1,5 +1,6 @@
 node_modules
 .idea
 test
-webpack.config.js
 package-lock.json
+.DS_Store
+
