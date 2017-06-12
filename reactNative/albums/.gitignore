@@ -51,11 +51,7 @@ buck-out/
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
-
-.buckconfig
+.babelrc
 .flowconfig
 .gitattributes
 .watchmanconfig
-package-lock.json
-.babelrc
-
