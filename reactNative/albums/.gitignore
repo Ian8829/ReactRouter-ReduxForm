@@ -1,8 +1,0 @@
-.flowconfig
-package-lock.json
-.idea
-node_modules
-.gitattributes
-__tests__
-app.json
-build
