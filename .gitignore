@@ -3,12 +3,8 @@ node_modules
 test
 package-lock.json
 .DS_Store
-
-.babelrc
-.buckconfig
-.eslintrc.json
-.flowconfig
-.gitattributes
-.watchmanconfig
 build
+_tests_
+
+
 
