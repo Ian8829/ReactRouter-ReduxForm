@@ -11,7 +11,8 @@ const Header = () => {
 
 const styles = {
   textStyle: {
-    fontSize: 20
+    fontSize: 20,
+    marginTop: 20
   }
 };
 
